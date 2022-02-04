@@ -1,4 +1,3 @@
-import sys
 from classes import Item
 from classes import Plan
 
@@ -16,6 +15,7 @@ class OptimizerMeta(type):
 
 
 class BaseOptimizer(metaclass=OptimizerMeta):
+    __slots__ = ['optimize']
     '''
     Used to confirm that all optimizers conform to the OptimizerMeta interface
     '''
@@ -29,7 +29,4 @@ class LeastRemainingMoney(BaseOptimizer):
             state.stars = item.stars + returns.stars
             state.items = [item.name()] + returns.items
         return state
-
-
-sys.path.append(".")
 

@@ -1,7 +1,8 @@
 from classes import Item
 
 
-money = 2254
+# money = 2254
+money = 1501
 
 items = set({
     Item('Midspring Plum', 'dress', 700, 6),
